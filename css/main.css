@@ -1,0 +1,30 @@
+/**
+ * @author Lucas Videla <lucasvidela@clic.gob.ar>
+ * @author Emanuel Farfaro Ruiz <emanuelfarfaroruiz@clic.gob.ar>
+ * @version 0.1
+ * @note Application Main Stylesheet File
+ */
+
+
+body {	
+}
+
+.footer {
+    border-top: 1px solid #E5E5E5;
+    color: #777777;
+    margin-top: 19px;
+    padding-top: 19px;
+}
+
+.ta-triangle{
+}
+.ta-triangle img{
+	margin: 38px auto;
+}
+.ta-triangle-result-container{
+	color: #2A6496;
+	font-weight: bolder;
+}
+.ta-triangle-result{
+	padding: 50px;
+}

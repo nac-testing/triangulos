@@ -1,0 +1,29 @@
+{
+  "name": "triangulos_webapp",
+  "version": "0.1.0",
+  "authors": [
+    "Lucas Videla <videlalucas@gmail.com>",
+    "Emanuel Farfaro <manufarfaro@gmail.com>"
+  ],
+  "description": "Aplicacion de Triangulos Usada en Teleconferencia de Testing UNLaM.",
+  "main": [
+    "js/main.js",
+    "css/main.css"
+  ],
+  "dependencies": {
+    "jquery": "2.1.*",
+    "bootstrap": "~3.1.1"
+  },
+  "keywords": [
+    "UNLaM"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.unlam.edu.ar",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

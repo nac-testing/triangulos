@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> .:: Todos Aprendiendo - Triangulos - Unlam ::.</title>
+		<link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+		<link type="text/css" rel="stylesheet" href="css/main.css" />
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			$(document).ready(function (){
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div class="container">
+	      <!-- Static navbar -->
+	      <div role="navigation" class="navbar navbar-default">
+	        <div class="container-fluid">
+	          <div class="navbar-header">
+	          	<button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+	              <span class="sr-only">Toggle navigation</span>
+	              <span class="icon-bar"></span>
+	              <span class="icon-bar"></span>
+	              <span class="icon-bar"></span>
+	            </button>
+	            <a href="#" class="navbar-brand">Triangulos App</a>
+	          </div>
+	          <div class="navbar-collapse collapse">
+	            <ul class="nav navbar-nav">
+	              <li class="active"><a href="#">App</a></li>
+	              <li><a href="#">C&oacute;digo Fuente</a></li>
+	            </ul>
+	          </div><!--/.nav-collapse -->
+	        </div><!--/.container-fluid -->
+	      </div>
+	
+	      <!-- Main component for a primary marketing message or call to action -->
+	      <div class="jumbotron">
+	        <h1>Triangulos App</h1>
+	        <p>
+	        	A continuaci&oacute;n se presenta un formulario cuya acci&oacute;n representa el tama&ntilde;o de los catetos expresados en pixeles (Px.).<br />
+	        	Como comportamiento adicional la aplicaci&oacute;n es capaz de reconocer si los valores que ingresaste corresponden a los de un triangulo y de ser as&iacute; de que tipo de triangulo se trata.
+	        </p>
+	        <p>
+	          <a role="button" href="../../components/#navbar" class="btn btn-lg btn-primary">Ver C&oacute;digo Fuente de la App &#8811;</a>
+	        </p>
+	      </div>
+	      <div class="row">
+	      		<div class="col-md-4">
+	      			<h3> Ingrese el Valor de los Catetos:</h3>
+	      			<form id="catetos-form" role="form" method="post" action="./" enctype="application/x-www-form-urlencoded">
+	      				<div class="form-group">
+	      					<label for="ta-cateto-a">Cateto A:</label>
+    						<input name="a" class="form-control" id="ta-cateto-a">
+	      				</div>
+	      				<div class="form-group">
+	      					<label for="ta-cateto-a">Cateto B:</label>
+    						<input name="b" class="form-control" id="ta-cateto-b">
+	      				</div>
+	      				<div class="form-group">
+	      					<label for="ta-cateto-a">Cateto C:</label>
+    						<input name="c" class="form-control" id="ta-cateto-c">
+	      				</div>
+	      				<button type="button" class="btn btn-success btn-lg btn-block js-submit">Enviar</button>
+	      			</form>
+	      		</div>
+	      		<div class="col-md-4">
+	      			<h3> Resultado:</h3>
+	      			<div class="bg-success text-center ta-triangle-result-container">
+		      			<p id="ta-result-triangulo" class="ta-triangle-result">
+		      				Complet&aacute; los campos para ver si es un tri&aacute;ngulo.
+		      			</p>
+		      			<p id="ta-result-tipo" class="ta-triangle-result">
+		      				Complet&aacute; los campos para ver el tipo de tri&aacute;ngulo.
+		      			</p>
+	      			</div>
+	      		</div>
+	      		<div class="col-md-4">
+	      			<h3> Su Representaci&oacute;n:</h3>
+	      			<p class="bg-info text-center ta-triangle">
+	      				<img alt="Triangulo" src="images/ta-triangle-example.gif" />
+					</p>
+	      		</div>
+	      </div>
+	    </div>
+	    <div class="footer">
+	    	<p class="text-center">&copy; UNLaM 2014</p>
+	    </div>
+	    <script>
+	    	function comprobarTriangulo() {
+	    		a = Math.abs(parseInt($("input[name='a']").val(),10))
+	    		b = Math.abs(parseInt($("input[name='b']").val(),10))
+	    		c = Math.abs(parseInt($("input[name='c']").val(),10))
+
+	    		if (a + b > c && a + c > b && b + c > a) {
+	    			return 'Forma tri&aacute;ngulo'
+	    		} else {
+	    			return 'No forma tri&aacute;ngulo'
+	    		}
+	    	}
+	    	function comprobarTipo() {
+	    		a = $("input[name='a']").val()
+	    		b = $("input[name='b']").val()
+	    		c = $("input[name='c']").val()
+	    		if (a == b && b == c) {
+	    			return 'equil&aacute;tero'
+	    		}
+	    		if ((a == b && b != c) ||
+	    			  (a == c && b != c) ||
+	    			  (b == c && a != b)) {
+	    			return 'is&oacute;sceles'
+	    		}
+	    		return 'escaleno'
+	    	}
+	    	$(".js-submit").on('click', function(){
+	    		$("#ta-result-triangulo").html(comprobarTriangulo());
+	    		$("#ta-result-tipo").html(comprobarTipo());
+	    	})
+	    </script>
+	</body>
+</html>
