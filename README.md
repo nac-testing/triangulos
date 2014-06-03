@@ -17,7 +17,6 @@ Tecnologías
 
 Triangulo App fue realizada utilizando las siguientes tecnologías:
 
-* [Sinatra.rb] - Sinatra.rb
 * [jQuery] - La conocida librería JavaScript
 * [Bower] - Manejador de dependencias de Frontend
 * [Twitter Bootstrap] - Interfaz UI Creada por Twitter
@@ -26,7 +25,7 @@ Instalación
 --------------
 
 ```sh
-git clone [git-repo-url] triangulo-app
+git clone https://github.com/nac-testing/triangulos.git
 cd triangulo-app
 bower install
 ```
@@ -47,7 +46,7 @@ License
 MIT - UNLaM
 
 
-**Free Software, Hell Yeah!**
+**Free Software, Yeah!**
 
 [Sinatra.rb]:http://www.sinatrarb.com/
 [Bower]:http://bower.io/
